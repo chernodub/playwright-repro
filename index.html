@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Using <code>new Intl.ListFormat</code>!
+    <div class="container"></div>
+    <script>
+      const data = ["first", "second", "third"];
+
+      const listFormat = new Intl.ListFormat("en", {
+        type: "disjunction",
+        style: "short",
+      });
+
+      document.querySelector(".container").textContent = `${listFormat.format(
+        data
+      )}`;
+    </script>
+  </body>
+</html>
